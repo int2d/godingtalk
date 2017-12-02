@@ -150,7 +150,6 @@ func (c *DingTalkClient) GetConfig(nonceStr string, timestamp string, url string
 		"agentId":   c.AgentID,
 		"timeStamp": timestamp,
 		"corpId":    c.CorpID,
-		"ticket":    ticket,
 		"signature": Sign(ticket, nonceStr, timestamp, url),
 	}
 	bytes, _ := json.Marshal(&config)
